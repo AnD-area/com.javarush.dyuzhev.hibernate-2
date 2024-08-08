@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>com.javarush.dyuzhev.hibernate-2</name>
-  <url>http://maven.apache.org</url>
+  <url>https://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -47,4 +47,19 @@
       <version>3.9.1</version>
     </dependency>
   </dependencies>
+
+  <build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.13.0</version>
+      <configuration>
+        <source>21</source>
+        <target>21</target>
+        <release>21</release>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
 </project>

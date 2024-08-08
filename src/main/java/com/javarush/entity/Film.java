@@ -1,4 +1,4 @@
-package com.javarush.domain;
+package com.javarush.entity;
 
 
 import jakarta.persistence.*;
@@ -10,8 +10,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.Year;
-import java.util.Date;
-import java.util.HashSet;
 import java.util.Set;
 
 @Entity

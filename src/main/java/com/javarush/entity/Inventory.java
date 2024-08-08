@@ -1,4 +1,4 @@
-package com.javarush.domain;
+package com.javarush.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -7,22 +7,26 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
-
 @Entity
-@Table(name = "film", schema = "language")
-@NoArgsConstructor
+@Table(name = "inventory", schema = "movie")
 @Data
-public class Language {
+@NoArgsConstructor
+public class Inventory {
 
     @Id
-    @Column(name = "language_id")
+    @Column(name = "inventory_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Byte id;
-
-    @Column(name = "name", columnDefinition = "char")
-    private String name;
+    private Integer id;
 
     @Column(name = "last_update")
     @UpdateTimestamp
     private LocalDateTime lastUpdate;
+
+    @ManyToOne
+    @JoinColumn(name = "film_id")
+    private Film film;
+
+    @ManyToOne
+    @JoinColumn(name = "store_id")
+    private Store store;
 }
