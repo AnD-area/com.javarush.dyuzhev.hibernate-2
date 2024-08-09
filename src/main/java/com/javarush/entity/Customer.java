@@ -41,7 +41,7 @@ public class Customer {
     @Type(type = "org.hibernate.type.NumericBooleanType")
     private Boolean isActive;
 
-    @Column(name = "ctreate_date")
+    @Column(name = "create_date")
     @CreationTimestamp
     private LocalDateTime createDate;
 

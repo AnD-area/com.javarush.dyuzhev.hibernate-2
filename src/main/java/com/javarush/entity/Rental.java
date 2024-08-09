@@ -20,7 +20,7 @@ public class Rental {
     private Integer id;
 
     @Column(name = "rental_date")
-    private LocalDate rentalDate;
+    private LocalDateTime rentalDate;
 
     @ManyToOne
     @JoinColumn(name = "inventory_id")

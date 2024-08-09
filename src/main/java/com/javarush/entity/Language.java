@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 
 @Entity
-@Table(name = "film", schema = "language")
+@Table(name = "language", schema = "movie")
 @NoArgsConstructor
 @Data
 public class Language {
